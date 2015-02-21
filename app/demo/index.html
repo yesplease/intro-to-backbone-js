@@ -31,22 +31,31 @@
 
     <script type="text/x-mustache-template" id="index-template">
       <h2>There are {{ count }} recipes</h2>
+      <div class = "recipes"></div>
     </script>
-    <!-- TODO:
-      * A template for an individual recipe
-      * A template for a recipe creation form
-        for this, here is a bootstrap form element:
-          <div class='control-group'>
-            <label class='control-label' for='id_of_field'>Field</label>
-            <div class='controls'>
-              <input type='text' class='input-xlarge' id='id_of_field'>
-            </div>
-          </div>
-        and a bootstrap submit button:
-          <div class="form-actions">
-            <button type="submit" class="btn btn-primary">Submit</button>
-          </div>
-    -->
+    <script type="text/x-mustache-template" id="index-form-template">
+      <div class='control-group'>
+        <label class='control-label' for='name'>Name</label>
+        <div class='controls'>
+          <input type='text' class='input-xlarge' id='name'>
+        </div>
+      </div>
+      <div class='control-group'>
+        <label class='control-label' for='ingredients'>Ingredients</label>
+        <div class='controls'>
+          <input type='text' class='input-xlarge' id='ingredients'>
+        </div>
+      </div>
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary">Add recipe</button>
+      </div>
+    </script>
+    <script type="text/x-mustache-template" id="index-recipe-template">
+      <h2>{{name}}</h2>
+      <p>{{ingredients}}</p>
+      <button class='btn btn-danger'>Delete</button>
+    </script>
+
 
     <script src="js/jquery.js"></script>
     <script src="js/bootstrap.js"></script>
